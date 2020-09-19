@@ -38,7 +38,6 @@ export default {
         } else {
             this.itemList[index].quantity += 1;
         }
-        
       }
   }
 };
