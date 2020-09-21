@@ -50,7 +50,7 @@ export default {
         }
         
         .carousel-cell:nth-child(1){
-            background-image:url(../../public/5.png);
+            background-image:url(../../public/5.jpg);
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -68,16 +68,16 @@ export default {
             }
         }
         .carousel-cell:nth-child(2){
-            background-image:url(../../public/4.png);
+            background-image:url(../../public/4.jpg);
         }
         .carousel-cell:nth-child(3){
-        background-image:url(../../public/12.png);
+        background-image:url(../../public/12.jpg);
         }
         .carousel-cell:nth-child(4){
-        background-image:url(../../public/7.png);
+        background-image:url(../../public/7.jpg);
         }
         .carousel-cell:nth-child(5){
-        background-image:url(../../public/13.png);
+        background-image:url(../../public/13.jpg);
         }
     }
     @media (min-width: 768px){
