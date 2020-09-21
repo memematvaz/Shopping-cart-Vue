@@ -48,6 +48,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
 
         @media (min-width: 768px){
             display: flex;

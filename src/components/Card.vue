@@ -47,12 +47,12 @@ export default {
             border-radius: 10px 10px 0px 0px;
         }
         .card_title{
-            @include mobile-card-title;
+            @include title;
             margin: 20px 0px 0px 0px;
             text-transform:uppercase
         }
         .card_description{
-            @include mobile-text;
+            @include text;
         }
         .card_price-button{
             display: flex;
@@ -61,7 +61,7 @@ export default {
             align-items: center;
             margin-bottom: 20px;
             .card_price{
-                @include mobile-text;
+                @include text;
             }
             .card_button{
                 @include button;

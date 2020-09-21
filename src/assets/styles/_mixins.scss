@@ -1,11 +1,11 @@
-@mixin mobile-card-title {
+@mixin title {
     font-family: $text-font;
-    color:$card-title;
+    color:$details-color;
     font-size: 16px;
     line-height: 1.5;
 };
 
-@mixin mobile-text{
+@mixin text{
     font-family: $text-font;
     color: $text-color;
     font-size: 16px;
@@ -13,17 +13,17 @@
 }
 
 @mixin button{
-    background-color: $card-title;
+    background-color: $details-color;
     color: white;
     font-family: $text-font;
-    border: $card-title;
+    border: $details-color;
     border-radius: 100px;
     padding: 10px;
     font-weight: 900; 
-   
     text-align: center;
     cursor: pointer;
     &:hover{
-        background-color: black;
+        transition: 0.3s;
+        background-color: $hover-color;
     }
 }

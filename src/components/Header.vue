@@ -1,9 +1,11 @@
 <template>
-    <header class="header container">
-        <div class="header_logo-container" id="return-home">
-            <img class="header_icon" src="../../public/logo.png" alt="Logo">
-            <h1 class="header_title">Asian Vegan</h1>
-        </div>
+    <header class="header">
+        <a href="#start-page">
+            <div class="header_logo-container" id="return-home">
+                <img class="header_icon" src="../../public/logo.png" alt="Logo">
+                <h1 class="header_title">Asian Vegan</h1>
+            </div>
+        </a>
         <div class="header_cart-container">
             <img class="header_icon"   :class="{'header_icon-openedCart' : isCartOpen}" src="../../public/cart.png" alt="Carrito"  @click.prevent="toggle">
             <Cart  :isCartOpen="isCartOpen"/>
@@ -38,6 +40,11 @@ export default {
    watch: {
        itemList(value) {
            console.log('animar icono carrito')
+            function animate () {
+                if (TWEEN.update()) {
+                requestAnimationFrame(animate)
+                }
+            }
        }
    }
 }
@@ -45,39 +52,40 @@ export default {
 <style lang="scss">
     @import '../assets/styles/main.scss';
     .header{
-     width: 100%;
-     height: 60px;
-     top:0px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     position: fixed;
-     z-index: 1;
-     background-color: #fff;
-     box-shadow: -9px 8px 10px rgba(0,0,0,.16);
-     .header_logo-container{
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         align-items: center;
-         .header_title{
-             font-family: $title-font;
-             font-size: 30px;
-             font-weight: 100;
-             color: $card-title;
-             margin-left: 10px;
-         }
-         &:hover{
-             .header_title{
-                transition: 0.3s;
-                color:black;
-             }
-             .header_icon{
-                  transition: 0.3s;
-                  filter: invert(0%) sepia(65%) saturate(0%) hue-rotate(207deg) brightness(98%) contrast(103%);
-             }
-         }
+        width: 100%;
+        height: 60px;
+        top:0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 99;
+        background-color: #fff;
+        box-shadow: -9px 8px 10px rgba(0,0,0,.16);
+        padding: 15px 30px;
+        .header_logo-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .header_title{
+                font-family: $title-font;
+                font-size: 30px;
+                font-weight: 100;
+                color: $details-color;
+                margin-left: 10px;
+            }
+            &:hover{
+                .header_title{
+                    transition: 0.3s;
+                    color:$hover-color;
+                }
+                .header_icon{
+                    transition: 0.3s;
+                    filter: invert(80%) sepia(9%) saturate(2312%) hue-rotate(50deg) brightness(89%) contrast(86%);
+                }
+            }
      }
      .header_icon{
         height: 30px; 
@@ -85,7 +93,7 @@ export default {
         cursor: pointer;
         &:hover{
             transition: 0.3s;
-            filter: invert(0%) sepia(65%) saturate(0%) hue-rotate(207deg) brightness(98%) contrast(103%);
+         filter: invert(80%) sepia(9%) saturate(2312%) hue-rotate(50deg) brightness(89%) contrast(86%);
         }
         &:active, &:visited{
            filter: invert(58%) sepia(10%) saturate(1066%) hue-rotate(83deg) brightness(96%) contrast(86%);
@@ -98,5 +106,25 @@ export default {
         }
      }
     }
-    
+    @media (min-width: 768px){
+        .header{
+            height: 80px;
+            padding: 0px 80px;
+            .header_logo-container{
+                .header_title{
+                    font-family: $title-font;
+                    font-size: 35px;
+                }
+            }
+            .header_icon{
+                height: 40px; 
+            }
+      }
+    }
+    @media (min-width: 1200px){
+        .header{
+            padding: 0px 120px;
+      }
+    }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="hero_carousel">
+    <div class="hero_carousel" id="start-page">
         <flickity  class="flickity" ref="flickity" :options="flickityOptions">
             <div class="carousel-cell"></div>
             <div class="carousel-cell"></div>
@@ -78,6 +78,24 @@ export default {
         }
         .carousel-cell:nth-child(5){
         background-image:url(../../public/13.png);
+        }
+    }
+    @media (min-width: 768px){
+        .hero_carousel {
+            .carousel-cell:nth-child(1){
+                &:before{
+                font-size: 60px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px){
+        .hero_carousel {
+            .carousel-cell:nth-child(1){
+                &:before{
+                margin: 180px;
+                }
+            }
         }
     }
     

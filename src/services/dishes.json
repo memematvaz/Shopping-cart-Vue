@@ -108,7 +108,7 @@
         "name": "Pad KraPao bowl",
         "image": "./14.png",
         "description": "Ensalada de arroz con lentejas, pepinos y tofu con salsa teriyaki.",
-        "price": 16,
+        "price": 12,
         "ingredients": ["arroz", "teriyaki", "lentejas", "pepino", "lima", "ensalada"]
     }
 ]
