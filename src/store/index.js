@@ -21,7 +21,7 @@ export default new Vuex.Store({
     },
     clearList(state, ){
       state.itemList = []
-    }
+    },
   },
   actions: {
     addToList(context, item) {

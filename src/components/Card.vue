@@ -38,7 +38,7 @@ export default {
         max-width: 300px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         .card_image{
             height: 150px;
             display: block;

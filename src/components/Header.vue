@@ -32,21 +32,21 @@ export default {
         itemList() {
             return this.$store.getters.itemList;
         },
-       
     },
    methods: {
     toggle() {
         this.isCartOpen = !this.isCartOpen
     },
-
    },
    watch: {
-       itemList(value) {
-           console.log('animar icono carrito')
-            this.shaked = true;
+       itemList:{
+          handler: function(value, oldValue){
+              this.shaked = true;
             setTimeout(() => this.shaked = false, 1000)
-           } 
-
+         },
+         deep:true
+       }
+       
        }
    
 }

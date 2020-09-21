@@ -36,10 +36,7 @@ export default {
             id: dish.id,
             image: dish.image,
             
-        }).then(() => {
-         
-           
-        });
+        }).then(() => { });
       }
   }
 };
