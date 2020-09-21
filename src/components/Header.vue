@@ -7,7 +7,7 @@
             </div>
         </a>
         <div class="header_cart-container">
-            <img class="header_icon"   :class="{'header_icon-openedCart' : isCartOpen}" src="../../public/cart.png" alt="Carrito"  @click.prevent="toggle">
+            <img class="header_icon"   :class="{'header_icon-openedCart' : isCartOpen, 'cart_shaked' : shaked}" src="../../public/cart.png" alt="Carrito"  @click.prevent="toggle">
             <Cart  :isCartOpen="isCartOpen"/>
         </div>
        
@@ -25,28 +25,30 @@ export default {
    data(){
       return{
        isCartOpen: false,
+       shaked: false,
       }
   },
     computed:{
         itemList() {
             return this.$store.getters.itemList;
         },
+       
     },
    methods: {
     toggle() {
         this.isCartOpen = !this.isCartOpen
-    }
+    },
+
    },
    watch: {
        itemList(value) {
            console.log('animar icono carrito')
-            function animate () {
-                if (TWEEN.update()) {
-                requestAnimationFrame(animate)
-                }
-            }
+            this.shaked = true;
+            setTimeout(() => this.shaked = false, 1000)
+           } 
+
        }
-   }
+   
 }
 </script>
 <style lang="scss">
@@ -105,6 +107,27 @@ export default {
              filter: invert(46%) sepia(77%) saturate(2693%) hue-rotate(124deg) brightness(96%) contrast(108%);
         }
      }
+     .cart_shaked{
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+          transform: translate3d(0, 0, 0);
+     }
+    }
+    @keyframes shake {
+        10%, 90% {
+            transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+            transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+            transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+            transform: translate3d(4px, 0, 0);
+        }
     }
     @media (min-width: 768px){
         .header{

@@ -19,6 +19,7 @@ export default {
   data(){
       return{
        dishes,
+      
       }
   },
   computed: {
@@ -34,8 +35,10 @@ export default {
             quantity: 1,
             id: dish.id,
             image: dish.image,
+            
         }).then(() => {
-            this.$emit('move-cart', )
+         
+           
         });
       }
   }
