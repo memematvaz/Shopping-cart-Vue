@@ -7,9 +7,6 @@
             <div class="carousel-cell"></div>
             <div class="carousel-cell"></div>
         </flickity>
-
-            <h1>Asian Vegan Food</h1>
-            <p>Pide tu comida asiática vegana</p>
     </div>
 </template>
 <script>
@@ -22,7 +19,7 @@ export default {
   data () {
     return {
       flickityOptions: {
-        initialIndex: 3,
+        initialIndex: 0,
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true,
@@ -34,22 +31,39 @@ export default {
 </script>
 
 <style lang="scss">
+    @import '../assets/styles/main.scss';
     .hero_carousel {
         background: white;
         height: 100vh;
+        width: 100%;
         .carousel-cell {
             width: 66%;
-            height: 90vh;
+            height: 95vh;
             margin-right: 10px;
             border-radius: 5px;
             counter-increment: carousel-cell;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
         }
+        
         .carousel-cell:nth-child(1){
             background-image:url(../../public/8.png);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            &:before{
+            text-align: center;
+            content: "Pide la mejor comida asiática vegana";
+            font-weight: 100;
+            font-size: 40px;
+            font-family: $title-font;
+            color: white;
+            margin: 40px 20px;
+            text-shadow: black 0.1em 0.1em 0.2em
+            }
         }
         .carousel-cell:nth-child(2){
             background-image:url(../../public/3.png);

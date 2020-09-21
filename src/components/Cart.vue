@@ -7,12 +7,12 @@
                     <h4 class="cart_item-title">{{item.data.name}}</h4>
                     <p class="cart_item-text">{{item.data.price}}€   x{{item.quantity}}  </p>
                 </div>
-                <button class="cart_item-buttom-x" @click="removeItem(item)">x</button>
+                <button class="cart_item-button-x" @click="removeItem(item)">x</button>
             </li>
         </ul>
-        <div class="cart_item-buttom">
-            <h4>Total: {{ total }}€</h4>
-            <button @click="pay()">Comprar</button>
+        <div class="cart_item-button">
+            <h4 class="cart_total">Total: <span>{{ total }}€</span> </h4>
+            <button class="cart_pay-button" @click="pay()">Comprar</button>
         </div>
         
     </div>
@@ -64,41 +64,56 @@ export default {
         transform: translate(-133%);
         box-shadow: -9px 8px 10px rgba(0,0,0,.16);
         border-top: 1px solid #f1f1f1;
-    .cart_item{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #f1f1f1;
-        .cart_item-image{
-            height: 70px;
-            width: 60px;
-        }
-        .cart_item-text-container{
-            width: 150px;
-            .cart_item-title{
+        .cart_item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #f1f1f1;
+            .cart_item-image{
+                height: 70px;
+                width: 60px;
+            }
+            .cart_item-text-container{
+                width: 150px;
+                .cart_item-title{
+                    @include mobile-card-title;
+                    padding: 0px 10px;
+                    text-align: left;
+                }
+                .cart_item-text{
+                    @include mobile-text;
+                    font-size: 16px;
+                    padding: 0px 10px;
+                    text-align: left;
+                }
+            }
+            .cart_item-button-x{
+                    @include button;
+                    font-size: 16px;
+                    padding: 1px 6px;      
+                }
+          }
+          .cart_item-button{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            .cart_total{
                 @include mobile-card-title;
                 padding: 0px 10px;
                 text-align: left;
+                span{
+                    @include mobile-text;
+                    font-weight: 400;
+                }
             }
-            .cart_item-text{
-                @include mobile-text;
-                font-size: 16px;
-                padding: 0px 10px;
-                text-align: left;
-
-            }
-            
-        }
-        .cart_item-buttom-x{
+            .cart_pay-button{
                 @include button;
-                font-size: 16px;
-                font-weight: 900;
-
-                
+                font-size:14px;
             }
-    }
+          }
     }
 
 </style>

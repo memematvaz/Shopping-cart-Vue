@@ -20,14 +20,7 @@ export default {
 
 
 <style lang="scss">
- .container{
-   padding: 0px 20px;
-
-  @media (min-width: 768px){
-    padding: 15px 20px;
-   }
-  @media (min-width: 768px){
-    padding: 20px;
-   }
- }
+  .app{
+    width: 100%;
+  }
 </style>

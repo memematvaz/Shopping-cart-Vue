@@ -2,7 +2,7 @@
     <header class="header container">
         <div class="header_logo-container" id="return-home">
             <img class="header_icon" src="../../public/logo.png" alt="Logo">
-            
+            <h1 class="header_title">Asian Vegan</h1>
         </div>
         <div class="header_cart-container">
             <img class="header_icon"   :class="{'header_icon-openedCart' : isCartOpen}" src="../../public/cart.png" alt="Carrito"  @click.prevent="toggle">
@@ -43,6 +43,7 @@ export default {
 }
 </script>
 <style lang="scss">
+    @import '../assets/styles/main.scss';
     .header{
      width: 100%;
      height: 60px;
@@ -55,23 +56,45 @@ export default {
      z-index: 1;
      background-color: #fff;
      box-shadow: -9px 8px 10px rgba(0,0,0,.16);
-     
+     .header_logo-container{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         .header_title{
+             font-family: $title-font;
+             font-size: 30px;
+             font-weight: 100;
+             color: $card-title;
+             margin-left: 10px;
+         }
+         &:hover{
+             .header_title{
+                transition: 0.3s;
+                color:black;
+             }
+             .header_icon{
+                  transition: 0.3s;
+                  filter: invert(0%) sepia(65%) saturate(0%) hue-rotate(207deg) brightness(98%) contrast(103%);
+             }
+         }
+     }
      .header_icon{
         height: 30px; 
-        filter: invert(25%) sepia(3%) saturate(2652%) hue-rotate(83deg) brightness(92%) contrast(83%);
+        filter: invert(58%) sepia(10%) saturate(1066%) hue-rotate(83deg) brightness(96%) contrast(86%);
         cursor: pointer;
         &:hover{
             transition: 0.3s;
             filter: invert(0%) sepia(65%) saturate(0%) hue-rotate(207deg) brightness(98%) contrast(103%);
         }
         &:active, &:visited{
-            filter: invert(57%) sepia(17%) saturate(599%) hue-rotate(83deg) brightness(97%) contrast(90%);
+           filter: invert(58%) sepia(10%) saturate(1066%) hue-rotate(83deg) brightness(96%) contrast(86%);
         }
      }
      .header_icon-openedCart{
-        filter: invert(57%) sepia(17%) saturate(599%) hue-rotate(83deg) brightness(97%) contrast(90%);
+        filter: invert(46%) sepia(77%) saturate(2693%) hue-rotate(124deg) brightness(96%) contrast(108%);
         &:hover{
-             filter: invert(57%) sepia(17%) saturate(599%) hue-rotate(83deg) brightness(97%) contrast(90%);
+             filter: invert(46%) sepia(77%) saturate(2693%) hue-rotate(124deg) brightness(96%) contrast(108%);
         }
      }
     }
