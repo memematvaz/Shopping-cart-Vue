@@ -17,15 +17,15 @@
     },
     {
         "id": 3,
-        "name": "Hamburguesa con pan de arroz frito",
+        "name": "Hamburguesa",
         "image": "./3.png",
-        "description": "Hamburguesa vegana con kale, col, aguacate y mostaza",
+        "description": "Hamburguesa con pan de arroz frito vegana con kale, col, aguacate y mostaza",
         "price": 15,
         "ingredients": ["hamburguesa", "arroz", "kale", "col", "aguacate", "mostaza"]
     },
     {
         "id": 4,
-        "name": "Ramen de noodles de calabacin picante",
+        "name": "Ramen de noodles de calabacin",
         "image": "./4.png",
         "description": "Sopa de noodles de calabacin picante con setas, tomate y tofu",
         "price": 14,
@@ -81,9 +81,9 @@
     },
     {
         "id": 11,
-        "name": "Brochetas de setas con salsa teriyaki",
+        "name": "Brochetas de setas",
         "image": "./11.png",
-        "description": "Setas a la parrilla con salsa teriyaki",
+        "description": "Brochetas de setas a la parrilla con salsa teriyaki",
         "price": 10,
         "ingredients": ["brochetas", "setas", "teriyaki"]
     },

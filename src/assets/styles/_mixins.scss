@@ -1,0 +1,26 @@
+@mixin mobile-card-title {
+    font-family: $text-font;
+    color:$card-title;
+    font-size: 16px;
+    line-height: 1.5;
+};
+
+@mixin mobile-text{
+    font-family: $text-font;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@mixin button{
+    background-color: $card-title;
+    color: white;
+    font-family: $text-font;
+    border: $card-title;
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+    }
+}

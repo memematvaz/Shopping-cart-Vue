@@ -7,11 +7,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Card from '@/components/Card.vue';
 import dishes from '@/services/dishes.json';
-import store from '../store.js';
-
 
 export default {
   name: 'Main',
@@ -22,22 +19,24 @@ export default {
   data(){
       return{
        dishes,
-       itemList: store.itemList,
       }
+  },
+  computed: {
+    itemList() {
+        return this.$store.getters.itemList;
+    },
   },
   methods:{
       addItemCart(dish){
-          const index = this.itemList.map(item => item.id).indexOf(dish.id);
-        if (index === -1) {
-            this.itemList.push({
-                data:dish,
-                price: dish.price,
-                quantity: 1,
-                id: dish.id,
-            })
-        } else {
-            this.itemList[index].quantity += 1;
-        }
+        this.$store.dispatch('addToList', {
+            data: dish,
+            price: dish.price,
+            quantity: 1,
+            id: dish.id,
+            image: dish.image,
+        }).then(() => {
+            this.$emit('move-cart', )
+        });
       }
   }
 };
