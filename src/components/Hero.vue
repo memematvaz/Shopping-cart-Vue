@@ -23,7 +23,9 @@ export default {
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true,
-        freeScroll: true
+        freeScroll: true,
+        draggable: true,
+        autoPlay: true
       }
     }
   }
@@ -48,7 +50,7 @@ export default {
         }
         
         .carousel-cell:nth-child(1){
-            background-image:url(../../public/8.png);
+            background-image:url(../../public/5.png);
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -66,7 +68,7 @@ export default {
             }
         }
         .carousel-cell:nth-child(2){
-            background-image:url(../../public/3.png);
+            background-image:url(../../public/4.png);
         }
         .carousel-cell:nth-child(3){
         background-image:url(../../public/12.png);

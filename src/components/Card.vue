@@ -69,5 +69,34 @@ export default {
             }
         }
     }
-    
+    @media (min-width: 768px){
+    .card{
+     
+        max-width: 300px;
+        height: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .card_title{
+           margin:0px;
+          
+        }
+        .card_description{
+            margin:0px;
+            padding: 0px 30px;
+            
+        }
+        .card_price-button{
+          
+            
+            .card_price{
+             margin:0px;
+            }
+            .card_button{
+               margin:0px;
+            }
+        }
+    }
+    }
 </style>
