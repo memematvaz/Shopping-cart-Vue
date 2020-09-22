@@ -1,4 +1,4 @@
-# technical-test-apeteat
+# technical-test
 
 ## Project setup
 ```
