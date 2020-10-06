@@ -1,4 +1,4 @@
-# technical-test
+# Shopping Cart Vue
 
 Simulador de tienda online de comida asiática vegana con un carrito de la compra.
 Lo he desarrollado con Vue usando Vuex. Y la librería Flickity para el carrusel del Hero.
